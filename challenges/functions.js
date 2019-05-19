@@ -23,36 +23,30 @@ function consume (x,y,cb) {
 // That function will become a callback, It can be invoked later. 
 
 // SUM of two numbers
-const add = (x,y,cb) => {
+const add = (x,y) => {
   return(x+y);
 };
-add(8, 20, sum =>{
-  console.log(`The sum is ${sum}`)
-});
 
 //Product of two numbers
-const multiple = (x,y,cb) => {
+const multiply = (x,y) => {
   return(x*y);
 }; 
-multiply(8, 20, multiply =>{
-  console.log(`The product is ${multiply}`)
-});
 
 //Greeting that returns "Hello first-name last-name, nice to meet you!"
-const greeting = (first_name, last_name, cb) => {
- return("first_name + last_name"); 
+const greeting = (first_name, last_name) => {
+ return(`Hello ${first_name} ${last_name}, nice to meet you!`); 
   }
   //greeting(John, Jacob, greeting) => {
   
-  console.log(`Hello ${greeting}, nice to meet you!`)
+  
   
 
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// consume(2,2,add); // 4
-// consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2,2,add)); // 4
+console.log(consume(10,16,multiply)); // 160
+console.log(consume("Mary","Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
