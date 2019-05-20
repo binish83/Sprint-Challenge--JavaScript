@@ -1,0 +1,75 @@
+Describe the biggest difference between .forEach & .map.
+.forEach doesn't actually return anything (undefined) 
+.forEach just calls a function on each element in the array
+.forEach changes the original Array 
+You could never do a return from a forEach function because the values are discarded.
+.map will also do the same, but the difference is that .map actually gives you a return value 
+and returns an entirely new array of the same size and leaving the original Array unchanged.
+
+
+What is the difference between a function and a method?
+functions return a value. they are like little computers working independently
+Methods allow us to share . methods are deifned in class and called using objects. they dont have independent existence
+they can change the variable in the class
+
+What is closure?
+Two Pass Compiler - 
+It's like an Onion, every subsequent layer below is nested within.
+Nested Functions have access to Main Outer Functions variables.
+Closure first access its own scope first, then it acceses the outer functions variables and keeps moving up until it finds its refernce.
+The reference is located where it was initially deifined.  
+That initial belonging gives that reference a home base. Inner environment references the outer environment that surrounds it. 
+The lexical scope of an inner reference is its outer functions that its nested in. because that's where it was initially defined.
+Belong === Lexical. 
+
+
+Describe the four rules of the 'this' keyword.
+The for principles of "this";
+* in your own words. explain the four principle for the "this" keyword below.
+
+The ${this} keyword always tries to point to the Window in any place. It works with functions.
+
+==* 1. Window Binding, is like the forest of trees, not sure which one we are pointing at, so we point at the forest. Not preferred
+
+==* 2. Implicit Binding,The object that is standing before the dot is what this keyword will be bound to. 
+You use your pointer to point at the exact location where you want to be. 
+This binding is automatic with objects and methods.  
+
+const hobbit = { 
+  name: "Samwise",
+  age: 102,
+  food: "taters",
+  cook: function() { 
+    
+    return `${this.name} loves to cook ${this.food}`;
+
+${this} keyword will be to the leftside
+${this} is invoked it is the object on the left side of invocation and method will be on the right. hard coded values, not prefered.
+
+==* 3. New Binding, Create a new object using object literal, add properties and methods and return this. 
+A constructor function is a function that returns an object. It is an Object creator. 
+When we call it, instead of the 'this' we use 'new' keyword. yikesss
+
+==* 4. Explicit Binding, We explicitly say to a function what object it should use for this — using functions such as call, apply and bind. 
+It is always for functions only. 
+It tells us where we want to go. We have full control of the 'this'keywrod. CALL, APPLY, BIND - - >  :)
+
+1. Call the first argument is &{this} keyword
+2. Apply there must be an array if you want to pass in more arguments, You can use the spread operator and Apply will become Obsolete.
+
+==* write out a code example of each explanation above
+
+There is no binding in arrow function. Arrow function don't bind witht he 'this' keyword.
+If you use arrow functions it will direct you to the forest/global :(
+"use strict" prevents us from binding to the window. Syntax is simple goes as is on its seprate line.
+Functions are called Methods when they are inside of an Object!!
+This key work binding doesn't happen when we use arrow functions.
+Function Invocation  =====   purple.function
+
+
+Why do we need super() in an extended class?
+If we want to extend a class in JS we use super and extend.
+super is used as a function which calls the parent class with parameters passed to child class. 
+This is an important step,because this will distinguish whether the child belongs to that parent or not.
+Super is also used as Object, which calls on methods of the parent class only. I don't remember doing that in my proejcts, 
+If I remember correctly it is used in the same way as .this keyword in your return statemnet
